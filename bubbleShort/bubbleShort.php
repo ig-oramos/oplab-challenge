@@ -35,8 +35,9 @@
                 } while ($hasChanged);
                 return $arr;
             }
-            // Checks if the submit button was pressed
-            if ($_GET['submit']) {
+               
+            // Check if the submit button was pressed
+            if (isset($_GET['submit'])) {
                 // Handles exceptions
                 try {
                     // Formats the input
