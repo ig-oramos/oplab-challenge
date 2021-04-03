@@ -83,7 +83,7 @@
             }, 'add_middle' => function (array $node) {
                 $_SESSION['linked_list']->addMiddle($node['position'], $node['element']);
                 return 'Item "'. $node['element'].
-                    '" successfully added to the middle (position: '. $node['position'].').';
+                    '" successfully added (position: '. $node['position'].').';
             }, 'add_last' => function (array $node) {
                 $_SESSION['linked_list']->addLast($node['element']);
                 return 'Item "'. $node['element']. '" successfully added to the end.';
