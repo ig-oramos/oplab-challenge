@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Linked list: implementation of a linked list using PHP
+ * 
+ * PHP version 7.4.3
+ * @author Igor Gomes Oliveira Ramos <igor.gomesz55@gmail.com>
+ */
 require_once('Node.php');
 class LinkedList {
     private Node $first, $last;
@@ -13,7 +20,8 @@ class LinkedList {
     /**
      * Returns the first element in the list.
      * 
-     * @return Node
+     * @return Node when the list isn't empty
+     * @return null when the list is empty
      */
     public function getFirst() {
         return ($this->length > 0?$this->first:null);
@@ -40,6 +48,8 @@ class LinkedList {
      * 
      * @param int $element
      * @param int $position
+     * 
+     * @throws \Exception when you're trying to add an element in an invalid position
      */
     public function addMiddle(int $position, int $element) {
         if ($position <= 1) {
@@ -66,7 +76,7 @@ class LinkedList {
     /**
      * Adds an element to the end of the list.
      * 
-     * @param int $element
+     * @param int $element that'll be added
      */
     public function addLast(int $element) {
         $new = new Node($element);
@@ -81,6 +91,8 @@ class LinkedList {
 
     /**
      * Removes the first element from the list and returns it.
+     * 
+     * @throws \Exception
      * 
      * @return int
      */
@@ -98,6 +110,9 @@ class LinkedList {
      * Removes a specific element to the list.
      * 
      * @param int $position
+     * 
+     * @throws \Exception
+     * 
      * @return int
      */
     function removeMiddle(int $position) {
@@ -109,7 +124,7 @@ class LinkedList {
         if ($this->length == 0)
             throw new Exception('Empty list.');
         else if ($position > $this->length)
-        throw new Exception('Invalid position.');
+            throw new Exception('Invalid position.');
         
         $aux = $this->first;
         for ($i = 2; $i < $position; ++$i)
@@ -123,6 +138,8 @@ class LinkedList {
 
     /**
      * Removes the last element from the list and returns it.
+     * 
+     * @throws \Exception
      * 
      * @return int
      */
@@ -138,6 +155,12 @@ class LinkedList {
         return $aux->next->data;
     }
 
+    /**
+     * Removes and returns an element from the list
+     * 
+     * @throws \Exception when you are trying to remove an element from an empty list
+     * @throws \Exception when you are trying to remove an element that isn't in the list
+     */
     function remove(int $element) {
         if ($this->first->data == $element)
             return $this->removeFirst();
@@ -168,6 +191,14 @@ class LinkedList {
         return $this->length;
     }
 
+    /**
+     * Searches for an element in the list and returns its position or -1,
+     * if the element isn't found
+     * 
+     * @throws \Exception
+     * 
+     * @return int
+     */
     function search(int $element) {
         if ($this->length == 0)
             throw new Exception('Empty list.');
