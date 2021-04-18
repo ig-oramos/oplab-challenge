@@ -39,9 +39,11 @@ Answer the following questions:
 an agile development approach, This because it's suitable for this kind of project. Therefore, some
 examples that could be used are: Kanban, Scrum, DSDM, among others.
 - How do you think an entity relationship diagram for _Instagram_ would be like?
-- Answer
+- [1st Diagram - Common user](images/diagram1.png)
+- [2nd Diagram - Business user](images/diagram2.png)
+- [Diagram images](images/)
 - Now that you have imagined the ER diagram, **how** would you build _Instagram_ from scratch?
-- Answer
+- I would start with a requirements search, define a development process, build models using mostly UML diagrams, choose a programming language, probably a framework, and then start coding.
 
 That's it! Thanks for doing this test!
 
