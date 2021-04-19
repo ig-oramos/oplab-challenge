@@ -18,10 +18,10 @@ Hi! If you wanna work with us, you gotta solve this first. Let's see what you've
 ### General
 Using your favorite programming language:
 
-1. Implement bubble sort.
-3. Implement a linked list.
-4. Implement this [algorithm](https://www.hackerrank.com/challenges/game-of-stones-1)(💡️there is no need to signup to this website. Just commit the _gameOfStones_ function implementation and that's it.💡️).
-5. Using the twitter API, create a script that given a word as an input, outputs the last 10 tweets containing that word.
+1. Implement bubble sort. [Bubble sort](bubbleSort/)
+3. Implement a linked list. [Linked list](linkedList/)
+4. Implement this [algorithm](https://www.hackerrank.com/challenges/game-of-stones-1)(💡️there is no need to signup to this website. Just commit the _gameOfStones_ function implementation and that's it.💡️). [Algorithm](gameOfStones/)
+5. Using the twitter API, create a script that given a word as an input, outputs the last 10 tweets containing that word. [Twitter API](twitterAPI)
 
 ### Frontend
 
@@ -43,7 +43,7 @@ examples that could be used are: Kanban, Scrum, DSDM, among others.
 - ![2nd Diagram - Business user](images/diagram2.png)
 - [Diagram images](images/)
 - Now that you have imagined the ER diagram, **how** would you build _Instagram_ from scratch?
-- I would start with a requirements search, define a development process, build models using mostly UML diagrams, choose a programming language, probably a framework, and then start coding.
+- I would start with a requirements search, define a development process, build models using mostly UML diagrams, choose a programming language, probably a framework, construct the database, and then start coding.
 
 That's it! Thanks for doing this test!
 
